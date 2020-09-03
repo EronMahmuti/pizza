@@ -1,13 +1,307 @@
+
+@import url('https://fonts.googleapis.com/css?family=Cabin|Herr+Von+Muellerhoff|Source+Sans+Pro:400,900&display=swap');
+@font-face {
+  font-family: 'Batman';
+  src: url(./assets/fonts/batmfa.ttf);
+  font-style: normal;
+  font-weight: 400,500,600,700,800,900; }
+
+  @font-face {
+    font-family: 'Batman outline';
+    src: url(./assets/fonts/batmfo.ttf);
+    font-style: normal;
+    font-weight: 400,500,600,700,800,900; }
+  
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /* background:linear-gradient(rgba(251,245,245,0.9),rgba(255,33,2,0.2)),url(./assets/tomation.jpg) center no-repeat; */
+   background:linear-gradient(rgba(254,125,92,0.8),rgba(254,125,92,0.75)),url(./assets/tomation.jpg); 
+  background-size: 100% 100%;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.ingredients{
+  position:absolute;
+  margin-top:-100px;
+}
+
+.cheese {
+  width: 100%;
+  position: absolute;
+}
+
+/* The container */
+.container-checkbox {
+  display: block;
+  position: relative;
+  padding-left:0px;
+  margin-top:20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+}
+
+/* Hide the browser's default checkbox */
+.container-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom checkbox */
+.container-checkbox .checkmark {
+  position: absolute;
+  top: 0;
+  left: 150px;
+  height: 25px;
+  width: 25px;
+  background-color: #fccd3d;
+  border-radius: 8px;
+}
+
+.itemat{
+  color:#0d0628;
+  font-size:1.9rem;
+  font-weight: 600;
+  font-family: monospace;
+  
+}
+
+/* On mouse-over, add a grey background color */
+
+
+/* When the checkbox is checked, add a blue background */
+.container-checkbox input:checked ~ .checkmark {
+  background-color: #fccd3d;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.container-checkbox .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container-checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container-checkbox .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid #0d0628;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* The container */
+.container-radio {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container-radio input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.container-radio .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container-radio:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container-radio input:checked ~ .checkmark {
+  background-color: #2196f3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.container-radio .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container-radio input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container-radio .checkmark:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+.z1 {
+  z-index: 1;
+}
+
+.z2 {
+  z-index: 2;
+}
+
+.z3 {
+  z-index: 3;
+}
+.z4 {
+  z-index: 4;
+}
+
+.title{
+  font-family:'Herr Von Muellerhoff', cursive;
+  font-size:45px;
+  font-weight: 600;
+  color:#333;
+  text-align: center;
+}
+
+.titulli{
+  text-align:center;
+  font-size:2.2rem;
+  letter-spacing: 3px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: 'Batman';
+}
+.pizza{
+  color:#04791a;
+  font-family: 'Batman';
+  font-size:3rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+  margin:2px;
+  padding-right:14px;
+  padding-left:0px;
+}
+
+.btn{
+  margin:7px 18px;
+  background: #04791a;
+  color:#222;
+  font-size:1.5rem;
+  border-radius: 30px;
+  border: none;
+  font-family:'Batman';
+  /* padding:12px; */
+  padding: 4px 10px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+}
+.hederi{
+  display: flex;
+  height:60px;
+  border-bottom: 3px solid #0d0628;
+  align-content: center;
+  margin-bottom:50px;
+}
+
+.logo{
+  width:150px;
+  height:120px;
+  margin-left:auto;
+  margin-right:auto;
+  
+}
+h4{
+  padding: 8px 10px;
+  margin:0;
+}
+.rumbullak{
+    
+    padding:14px;
+    flex:1;
+}
+.cipa{
+    margin-left: auto;
+    margin-right: auto;
+}
+.chekii{
+  font-family: monospace;
+  font-weight:600;
+  font-size:1.4rem;
+}
+.pizzamani{
+  margin-top:8px;
+  height:1rem;
+}
+.order{
+    margin-top:60px;
+}
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+@media screen and (max-width:900px){
+  .container-checkbox .checkmark {
+    position: absolute;
+    top: 0;
+    left: 5px;
+    padding:0;
+  }
+  .cipa{
+    width:200px;
+  }
+  .pizzamani{
+    position: absolute;
+    height:110px;
+  }
+  .rumbullak{
+    padding: 5px;
+  }
+  .titulli{
+    font-size:1.3rem;
+  }
+  .pizza{
+    font-size:1.5rem;
+  }
+  .itemat{
+    font-size:1.4rem;
+    margin-left: 22px;
+  }
+  .btn{
+    font-size:1.1rem;
+  }
 }
