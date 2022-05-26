@@ -24,6 +24,8 @@ npm start
 ```
 
 ## Screenshot
-
+![ingridi](https://user-images.githubusercontent.com/64994381/170497228-c29783dd-f4f1-4a60-a484-a0eb5597fb12.png)
+![pizzah](https://user-images.githubusercontent.com/64994381/170497239-e0899e5a-c921-4c2e-9427-6c71caf6d8f2.png)
+![orderDone](https://user-images.githubusercontent.com/64994381/170497252-0630b847-a7ee-43b1-91d7-5709059c93fb.png)
 
 
